@@ -1,10 +1,7 @@
-import { createMistral } from '@ai-sdk/mistral';
 import {  streamText } from 'ai';
+import { mistral } from '../model';
 
-const mistral = createMistral({
-    baseURL:"https://models.inference.ai.azure.com",
-    apiKey: process.env.MISTRAL_API_KEY,
-});
+
 
 export const systemPrompt = async (
     prompt: string,

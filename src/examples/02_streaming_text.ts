@@ -1,10 +1,6 @@
-import { createDeepSeek } from '@ai-sdk/deepseek';
 import {  streamText } from "ai";
+import { deepseek } from '../model';
 
-const deepseek = createDeepSeek({
-  baseURL: 'https://models.github.ai/inference',
-  apiKey: process.env.DEEPSEEK_API_KEY,
-});
 
 
 export const answerMyQuestion = async (
