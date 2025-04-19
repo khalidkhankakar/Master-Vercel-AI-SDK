@@ -2,13 +2,14 @@
   "name": "vercel-ai-sdk",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "dev": "tsx src/main.ts",
+    "dev": "ts-node ",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },

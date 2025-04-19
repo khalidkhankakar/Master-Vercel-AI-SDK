@@ -1,20 +1,23 @@
 import { createDeepSeek } from '@ai-sdk/deepseek';
 import { generateText } from "ai";
 
-// const anthropic = createAnthropic({
-//   apiKey: process.env.ANTHROPIC_API_KEY,
-// });
 const deepseek = createDeepSeek({
-  apiKey: process.env.DEEPSEEK_API_KEY ?? '',
+  baseURL: 'https://models.github.ai/inference',
+  apiKey: process.env.DEEPSEEK_API_KEY,
 });
+
+
 export const answerMyQuestion = async (
   prompt: string,
 ) => {
-  console.log(process.env.DEEPSEEK_API_KEY)
+  console.log('loadding model...');
   const { text } = await generateText({
-    model: deepseek('deepseek-chat'),
+    model: deepseek('deepseek/DeepSeek-V3-0324'),
     prompt,
   });
+ 
+  console.log('model loaded!');
+  console.log('model response:', text);
 
   return text;
 };
