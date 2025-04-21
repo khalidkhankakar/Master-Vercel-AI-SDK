@@ -9,7 +9,6 @@ const ask = async (
         prompt,
         model,
     })
-
     return text
 }
 
