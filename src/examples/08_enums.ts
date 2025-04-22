@@ -1,4 +1,4 @@
-import { generateObject, generateText } from "ai"
+import { generateObject } from "ai"
 import { mistral } from "../model"
 
 
