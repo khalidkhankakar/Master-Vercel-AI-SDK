@@ -1,12 +1,19 @@
-import { embed } from "ai";
+import { embed, embedMany } from "ai";
 import { openai } from "../model";
 
 
+const values = ["Dog", "Cat", "Car", "Bike"];
 
+const model = openai.embedding(
+    "text-embedding-3-large",
+);
 
-const { embedding } = await embed({
-    model:openai.embedding("text-embedding-3-large"),
-    value: 'sunny day at the beach',
+  
+const { embeddings } = await embedMany({
+    model,
+    values,
   });
-
-console.log(embedding);
+  
+console.dir(embeddings, { depth: null });
+  
+  
