@@ -1,4 +1,4 @@
-import { embed, embedMany } from "ai";
+import { cosineSimilarity, embed, embedMany } from "ai";
 import { openai } from "../model";
 
 
@@ -14,6 +14,33 @@ const { embeddings } = await embedMany({
     values,
   });
   
-console.dir(embeddings, { depth: null });
+// console.dir(embeddings, { depth: null });
   
+const vectorDatabase = embeddings.map(
+    (embedding, index) => ({
+      value: values[index],
+      embedding,
+    }),
+);
+
+const searchTerm = await embed({
+  model,
+  value: "tire",
+});
+
+
+const entries = vectorDatabase.map((entry) => {
+  return {
+    value: entry.value,
+    similarity: cosineSimilarity(
+      entry.embedding,
+      searchTerm.embedding,
+    ),
+  };
+});
+
+const sortedEntries = entries.sort(
+    (a, b) => b.similarity - a.similarity,
+  );
   
+  console.dir(sortedEntries, { depth: null });
