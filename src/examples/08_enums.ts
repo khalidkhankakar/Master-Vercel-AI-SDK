@@ -1,5 +1,5 @@
 import { generateObject } from "ai"
-import { mistral } from "../model"
+import { mistral } from "../models"
 
 
 const classifyText = async(prompt: string)=>{

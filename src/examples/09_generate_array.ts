@@ -1,5 +1,5 @@
 import { generateObject } from "ai"
-import { mistral } from "../model"
+import { mistral } from "../models"
 
 import { z } from "zod";
 

@@ -1,5 +1,5 @@
 import { generateText } from "ai";
-import { deepseek, mistral } from "../model";
+import { deepseek, mistral } from "../models";
 import { readFileSync } from "fs";
 
 const systemPrompt =

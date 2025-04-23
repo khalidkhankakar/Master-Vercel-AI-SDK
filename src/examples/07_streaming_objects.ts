@@ -1,6 +1,6 @@
 import {  streamObject } from "ai";
 import { z } from "zod";
-import {  mistral } from "../model";
+import {  mistral } from "../models";
 
 
 const recipeSchema = z.object({

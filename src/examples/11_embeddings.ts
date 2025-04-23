@@ -1,5 +1,5 @@
 import { cosineSimilarity, embed, embedMany } from "ai";
-import { openai } from "../model";
+import { openai } from "../models";
 
 
 const values = ["Dog", "Cat", "Car", "Bike"];

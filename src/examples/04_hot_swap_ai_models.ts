@@ -1,5 +1,5 @@
 import { generateText, LanguageModel } from "ai";
-import { deepseek, mistral } from "../model";
+import { deepseek, mistral } from "../models";
 
 const ask = async (
     prompt: string,

@@ -1,6 +1,6 @@
 import { generateObject } from "ai";
 import { z } from "zod";
-import { deepseek } from "../model";
+import { deepseek } from "../models";
 
 
 const recipeSchema = z.object({

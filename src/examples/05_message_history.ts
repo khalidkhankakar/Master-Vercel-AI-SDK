@@ -1,5 +1,5 @@
 import { generateText, type CoreMessage } from "ai";
-import { mistral } from "../model";
+import { mistral } from "../models";
 
 const messages : CoreMessage[] = [
 {

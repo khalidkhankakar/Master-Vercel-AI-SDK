@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { generateText, tool } from 'ai';
-import {  mistralModel } from '../model';
+import {  mistralModel } from '../models';
 
 const {toolResults} = await generateText({
   model: mistralModel,

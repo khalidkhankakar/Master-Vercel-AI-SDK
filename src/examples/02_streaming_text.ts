@@ -1,5 +1,5 @@
 import {  streamText } from "ai";
-import { deepseek } from '../model';
+import { deepseek } from '../models';
 
 
 

@@ -1,5 +1,5 @@
 import { generateText } from "ai";
-import { deepseek } from "../model";
+import { deepseek } from "../models";
 
 
 
