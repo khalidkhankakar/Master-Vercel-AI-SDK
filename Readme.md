@@ -1,1 +1,1 @@
-### 🚀 Vercel AI SDK with backend (core of sdk)
+# 🚀 Vercel AI SDK
