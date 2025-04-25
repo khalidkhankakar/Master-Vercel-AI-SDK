@@ -1,1 +1,1 @@
-### Master the all concepts of Vercel AI SDK with backend 
+### Master the all concepts of Vercel AI SDK with backend (core of sdk)
