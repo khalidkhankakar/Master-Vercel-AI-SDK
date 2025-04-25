@@ -2,3 +2,4 @@
 Master the all concepts of vercel ai sdk with backend
 Such as
 - Text generation
+- Streaming text
