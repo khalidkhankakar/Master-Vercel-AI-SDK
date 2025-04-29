@@ -1,0 +1,28 @@
+{
+  "name": "vercel-ai-sdk",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "ts-node ",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^1.2.10",
+    "@ai-sdk/deepseek": "^0.2.11",
+    "@ai-sdk/mistral": "^1.2.7",
+    "@ai-sdk/openai": "^1.3.12",
+    "@ai-sdk/xai": "^1.2.13",
+    "@types/node": "^22.14.1",
+    "ai": "^4.3.7",
+    "openai": "^4.94.0",
+    "tsx": "^4.19.3",
+    "zod": "^3.24.3"
+  }
+}
