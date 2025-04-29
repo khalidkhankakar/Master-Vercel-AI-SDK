@@ -13,3 +13,4 @@ Such as
 - Generate Alt text for images
 - Embedding text, image, json
 - Tool calling in realtime 
+- Handling error
