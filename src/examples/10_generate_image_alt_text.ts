@@ -1,5 +1,5 @@
 import { generateText } from "ai";
-import { deepseek, mistral } from "../models";
+import { deepseek, llama, mistral } from "../models";
 import { readFileSync } from "fs";
 
 const systemPrompt =
@@ -17,7 +17,7 @@ export const describeImage = async (
 const imageAsUint8Array = readFileSync(imagePath);
 
   const { text } = await generateText({
-     model:deepseek('deepseek/DeepSeek-V3-0324'),
+     model:llama('meta/Llama-4-Scout-17B-16E-Instruct'),
     system: systemPrompt,
     messages: [
         {
