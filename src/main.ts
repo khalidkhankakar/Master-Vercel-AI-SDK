@@ -1,1 +1,1 @@
-console.log('Vercel core AI SDK Full course example and implementing with UI');
+console.log('Vercel core AI SDK Full course example and implementing with UI + API calls');
