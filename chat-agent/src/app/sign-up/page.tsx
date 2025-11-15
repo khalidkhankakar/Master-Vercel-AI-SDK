@@ -17,10 +17,11 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
-import { Github } from "lucide-react"
+import { Github, Sliders } from "lucide-react"
 import { authClient } from "@/lib/auth-client"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 
 const formSchema = z.object({
@@ -69,10 +70,10 @@ export default function ProfileForm() {
         });
     }
 
-    async function signInWithGitHub() {
-        console.log("Sign in with GitHub");
+    async function signInWithSocial(provider: "github" | "google") {
+        console.log(`Sign in with ${provider}`);
         await authClient.signIn.social({
-            provider: "github",
+            provider,
             callbackURL: "/",
             
         })
@@ -137,10 +138,15 @@ export default function ProfileForm() {
                     <Button className="w-full my-2" type="submit">Submit</Button>
 
                     <Separator className="my-4 w-[50%]" />
-
-                    <Button type="button" onClick={signInWithGitHub} variant="outline" className="w-full cursor-pointer">
-                        <Github className="mr-2" />
+                    
+                    <Button type="button" onClick={()=>signInWithSocial('github')} variant="outline" className="w-full cursor-pointer">
+                        <Image src="/icons/github.svg" alt="GitHub" width={20} height={20} className="mr-2" />
                         Continue with GitHub
+                    </Button>
+
+                    <Button type="button" onClick={()=>signInWithSocial('google')} variant="outline" className="w-full cursor-pointer">
+                        <Image src="/icons/google.svg" alt="Google" width={20} height={20} className="mr-2" />
+                        Continue with Google
                     </Button>
 
                 </form>
