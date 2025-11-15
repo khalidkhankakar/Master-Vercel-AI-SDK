@@ -1,12 +1,9 @@
-import { Button } from "@/components/ui/button";
-
 const page = () => {
   return (
-    <div>
-      MY APP PAGE
-      <Button>Hello World</Button>
+    <div className='font-mono p-20'>
+      <h1 className="text-xl font-semibold">Welcome to the Chat Agent</h1>
     </div>
-  );
-};
+  )
+}
 
-export default page;
+export default page
