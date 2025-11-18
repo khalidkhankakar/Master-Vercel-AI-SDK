@@ -33,6 +33,14 @@ const page = () => {
         </Button>
       </Link>
       }
+      <div className="flex gap-4 my-4">
+        <Button asChild>
+          <Link href="/chats-rh">Go to Chats by Route Handlers</Link>
+        </Button>
+        <Button asChild>
+          <Link href="/chats-sa">Go to Chats by Server Actions</Link>
+        </Button>
+      </div>
     </div>
   )
 }
