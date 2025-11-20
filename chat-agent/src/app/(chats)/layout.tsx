@@ -18,7 +18,7 @@ export default function ChatLayout({
       <ChatSidebar />
       <SidebarInset>
         <ChatsHeader />
-       <main className="flex bg-amber-400 justify-center items-center h-[calc(100vh-4rem)] ">{children}</main>
+       <main className="h-[calc(100vh-4rem)] ">{children}</main>
       </SidebarInset>
     </SidebarProvider>
     );
