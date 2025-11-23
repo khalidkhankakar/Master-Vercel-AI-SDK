@@ -6,7 +6,7 @@ import ChatInput from "../_components/chat-input"
 const RouteHandlerPage = () => {
 
   const [input, setInput] = useState('');
-  const { messages, sendMessage } = useChat();
+  const { messages, sendMessage, } = useChat();
 
   return (
     <div className="h-full">
