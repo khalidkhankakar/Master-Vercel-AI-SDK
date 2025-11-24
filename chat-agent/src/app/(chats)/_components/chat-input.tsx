@@ -2,14 +2,15 @@ import { ArrowUp } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import type { UseChatHelpers } from '@ai-sdk/react';
+import type { ChatMessage } from '@/lib/type';
 
 
-type SendMessageType = (message?: { text: string; files?: FileList; metadata?: Record<string, unknown>; parts?: never; messageId?: string } | { files: FileList; metadata?: Record<string, unknown>; parts?: never; messageId?: string } | { metadata?: Record<string, unknown>; text?: never; files?: never; messageId?: string }, options?: Record<string, unknown>) => Promise<void>;
 
 interface ChatInputProps {
     input: string;
     onInputChange: (value: string) => void;
-    sendMessage: SendMessageType;
+    sendMessage: UseChatHelpers<ChatMessage>['sendMessage'];
 }
 
 
