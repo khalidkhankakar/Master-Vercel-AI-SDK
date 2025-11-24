@@ -1,11 +1,13 @@
 import Markdown from 'react-markdown'
+
+
 const TextMarkdown = ({
     text,
 }: {
     text: string;
 }) => {
   return (
-   <Markdown >{text}</Markdown>
+   <Markdown>{text}</Markdown>
   )
 }
 

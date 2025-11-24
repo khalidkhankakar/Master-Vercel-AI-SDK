@@ -1,8 +1,8 @@
-import type { ChatMessage } from '@/lib/type'
 import Image from 'next/image'
 import TextMarkdown from './text-markdown';
+import type { UIMessage } from 'ai';
 
-const ShowMessage = ({ message }: { message: ChatMessage }) => {
+const ShowMessage = ({ message }: { message: UIMessage }) => {
     const isUser = message.role === 'user';
     
     return (
@@ -13,7 +13,7 @@ const ShowMessage = ({ message }: { message: ChatMessage }) => {
             <Image 
                 width={32} 
                 height={32} 
-                className="w-5 h-5 rounded-full shrink-0 shadow-sm" 
+                className="w-5 h-5 rounded-full " 
                 src={isUser ? "/icons/github.svg" : "/icons/google.svg"} 
                 alt={isUser ? "User image" : "AI image"}
             />
