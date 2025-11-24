@@ -6,20 +6,21 @@ const ShowMessage = ({ message }: { message: ChatMessage }) => {
     const isUser = message.role === 'user';
     
     return (
-        <div className={`flex w-full items-end gap-3 mb-4 ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
+        <div className={`flex flex-col w-full gap-2 mb-4 ${isUser ? 'items-end' : 'items-start'}`}>
+            
+            <div className={`flex flex-col gap-2 ${isUser ? 'items-end' : 'items-start'}`}>
+            <div className='flex items-center gap-2'>
             <Image 
                 width={32} 
                 height={32} 
-                className="w-8 h-8 rounded-full shrink-0 shadow-sm" 
+                className="w-5 h-5 rounded-full shrink-0 shadow-sm" 
                 src={isUser ? "/icons/github.svg" : "/icons/google.svg"} 
                 alt={isUser ? "User image" : "AI image"}
             />
-            
-            <div className={`flex flex-col gap-1   ${isUser ? 'items-end' : 'items-start'}`}>
-                <span className="text-xs font-medium px-3 py-0.5">
+            <span className="text-sm font-medium py-0.5">
                     {isUser ? 'You' : 'AI'}
-                </span>
-                
+            </span>
+                </div>
                 <div className={`px-4 py-3 rounded-2xl shadow-sm transition-all duration-200 ${
                     isUser 
                         ? 'bg-blue-500 text-white rounded-br-none' 

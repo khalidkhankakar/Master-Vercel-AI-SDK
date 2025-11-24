@@ -10,11 +10,11 @@ const RouteHandlerPage = () => {
   const { messages, sendMessage, } = useChat();
 
   return (
-    <div className="h-full border-4">
+    <div className="h-full">
 
       <div className="h-full flex  items-center  flex-col ">
 
-        <div className="border-2 border-yellow-400 p-12 font-sans w-[90%] md:w-2/3 h-4/5  overflow-y-auto space-y-2  ">
+        <div className=" p-2 font-sans w-[90%] md:w-2/3 h-4/5  overflow-y-auto space-y-2  ">
           {messages.map(message => (
             <ShowMessage key={message.id} message={message} />
           ))}
