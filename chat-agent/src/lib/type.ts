@@ -14,7 +14,6 @@ export type MessageMetadata = z.infer<typeof messageMetadataSchema>;
 
 export type ChatMessage = UIMessage<
   MessageMetadata
-
 >;
 
 export type Attachment = {

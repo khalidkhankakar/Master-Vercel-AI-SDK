@@ -2,6 +2,7 @@
 import { useChat } from '@ai-sdk/react';
 import { useState } from "react";
 import ChatInput from "../_components/chat-input"
+import ShowMessage from './show-message';
 
 const RouteHandlerPage = () => {
 
@@ -9,21 +10,13 @@ const RouteHandlerPage = () => {
   const { messages, sendMessage, } = useChat();
 
   return (
-    <div className="h-full">
+    <div className="h-full border-4">
 
       <div className="h-full flex  items-center  flex-col ">
 
-        <div className=" p-12 font-sans w-[90%] md:w-2/3 h-4/5  overflow-y-auto space-y-2  ">
+        <div className="border-2 border-yellow-400 p-12 font-sans w-[90%] md:w-2/3 h-4/5  overflow-y-auto space-y-2  ">
           {messages.map(message => (
-            <div key={message.id} className="whitespace-pre-wrap border-2 ">
-              {message.role === 'user' ? 'User: ' : 'AI: '}
-              {message.parts.map((part, i) => {
-                switch (part.type) {
-                  case 'text':
-                    return <div key={`${message.id}-${i} ${message.role=== 'user' ?'bg-green-200':'bg-red:400' }`}>{part.text}</div>;
-                }
-              })}
-            </div>
+            <ShowMessage key={message.id} message={message} />
           ))}
         </div>
 
